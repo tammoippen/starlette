@@ -66,7 +66,7 @@ class SessionMiddleware:
                     headers = MutableHeaders(scope=message)
                     header_value = "{}={}; {}".format(
                         self.session_cookie,
-                        "null; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;",
+                        "null; path=/; Max-Age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT;",
                         self.security_flags,
                     )
                     headers.append("Set-Cookie", header_value)
